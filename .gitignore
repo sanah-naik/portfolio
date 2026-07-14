@@ -1,0 +1,8 @@
+# Keep the résumé PDF local — the repo is public.
+Sanah Naik Resume.pdf
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
