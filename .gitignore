@@ -1,6 +1,10 @@
 # Keep the résumé PDF local — the repo is public.
 Sanah Naik Resume.pdf
 
+# Build
+node_modules/
+dist/
+
 # OS / editor cruft
 .DS_Store
 Thumbs.db
