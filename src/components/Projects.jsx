@@ -98,22 +98,41 @@ export default function Projects() {
       ]
     },
     {
-      id: 'warehouse-automation',
+      id: 'fluent-notes-proj',
       category: 'tools',
-      title: 'Automated Warehouse Inventory Management',
-      subtitle: 'Garg Group — Software Engineering Internship Project',
-      description: 'Architected an automated inventory tracking and supply chain management system for Garg Group warehouses, drastically reducing discrepancies and earning an academic performance scholarship.',
-      tags: ['Java', 'SQL', 'Inventory Automation', 'Full Stack', 'Scholarship Awarded'],
-      highlight: 'Awarded Performance Scholarship',
+      title: 'Fluent Notes (Core Engine)',
+      subtitle: 'Ultra-Lightweight Acrylic Windows 11 Desktop Note Widget',
+      description: 'A standalone desktop productivity system with edge auto-docking, smart bezel collapse, 100% click-through transparency, and instant hover-peek previews designed for busy engineers.',
+      tags: ['Windows 11', 'Fluent UI', 'Acrylic', 'Electron', 'Local First', 'Productivity'],
+      highlight: 'Native Mica Aesthetics · Edge Snapping',
       metrics: [
-        { label: 'Impact', value: 'High Accuracy' },
-        { label: 'Award', value: 'Scholarship' },
-        { label: 'Domain', value: 'Supply Chain' },
+        { label: 'Latency', value: '<16ms' },
+        { label: 'Storage', value: 'Offline SQLite' },
+        { label: 'Memory', value: 'Minimal' },
       ],
       details: [
-        'Streamlined stock reconciliation, barcode tracking, and order dispatch.',
-        'Built resilient backend reporting APIs for real-time warehouse throughput.',
-        'Earned official recognition and performance merit scholarship.'
+        'Supports pastel color coding and quick Markdown checklist exports.',
+        'Dual-mirror backup architecture prevents data loss during sudden restarts.',
+        'Engineered to avoid window focus conflicts with primary CAD and code editors.'
+      ]
+    },
+    {
+      id: '3dx-migration',
+      category: 'enterprise',
+      title: 'Legacy to 3DEXPERIENCE Migration Orchestrator',
+      subtitle: 'Schema Transformation & Data Consistency Verification Pipeline',
+      description: 'Automated extraction, validation, and loading pipeline migrating legacy SmarTeam and ENOVIA VPM objects into modern 3DEXPERIENCE unified engineering product structures with audit logging.',
+      tags: ['Data Migration', 'Schema Mapping', 'JPO', 'TCL', 'Data Integrity', 'Python'],
+      highlight: '100% Schema Validation · Zero Data Drift',
+      metrics: [
+        { label: 'Integrity', value: '100%' },
+        { label: 'Type', value: 'Pipeline' },
+        { label: 'Verification', value: 'Automated' },
+      ],
+      details: [
+        'Custom TCL and JPO scripts ensuring referential integrity across engineering assemblies.',
+        'Automated dry-run comparison reporting discrepancies before production commit.',
+        'Delivered on-time cutover with complete compliance sign-off.'
       ]
     }
   ]
@@ -123,24 +142,24 @@ export default function Projects() {
     : projects.filter(p => p.category === filter)
 
   return (
-    <section id="projects" className="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto scroll-mt-16">
+    <section id="projects" className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto scroll-mt-16">
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-6 mb-10">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-slate-200 dark:border-white/10 pb-6 mb-12">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs font-mono text-cyan-300 mb-2">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs font-mono text-cyan-700 dark:text-cyan-300 font-semibold mb-2">
             <Boxes className="w-3.5 h-3.5" />
             <span>Architecture &amp; Engineering</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             Systems &amp; <span className="gradient-accent">Enterprise Work</span>
           </h2>
-          <p className="text-slate-400 text-base max-w-2xl mt-1">
+          <p className="text-slate-600 dark:text-slate-400 text-base max-w-2xl mt-1">
             Proven specifications, production utilities, and autonomous agent systems deployed to keep complex platforms reliable and legible.
           </p>
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap gap-2 p-1.5 rounded-xl bg-white/[0.03] border border-white/10 self-start md:self-auto">
+        <div className="flex flex-wrap gap-2 p-1.5 rounded-xl bg-slate-100/90 dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 self-start md:self-auto">
           {[
             { id: 'all', label: 'All Projects' },
             { id: 'enterprise', label: 'Enterprise & 3DX' },
@@ -152,8 +171,8 @@ export default function Projects() {
               onClick={() => setFilter(tab.id)}
               className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                 filter === tab.id
-                  ? 'bg-gradient-to-r from-cyan-500 to-indigo-600 text-white shadow-sm'
-                  : 'text-slate-400 hover:text-white hover:bg-white/5'
+                  ? 'bg-gradient-to-r from-cyan-600 to-indigo-600 text-white shadow-xs'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-white/5'
               }`}
             >
               {tab.label}
@@ -173,39 +192,39 @@ export default function Projects() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.35, delay: idx * 0.05 }}
-              className="p-6 sm:p-7 rounded-3xl bg-[#0e1422]/90 border border-white/10 hover:border-cyan-500/40 backdrop-blur-xl shadow-xl flex flex-col justify-between group transition-all"
+              className="p-6 sm:p-7 rounded-3xl bg-white/90 dark:bg-[#0e1422]/90 border border-slate-200 dark:border-white/10 hover:border-cyan-500/50 shadow-xs hover:shadow-lg dark:shadow-xl backdrop-blur-xl flex flex-col justify-between group transition-all"
             >
               <div className="space-y-4">
                 {/* Header Tag and Highlight */}
                 <div className="flex items-center justify-between gap-2">
-                  <span className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-mono text-cyan-300">
+                  <span className="px-2.5 py-1 rounded-full bg-cyan-50 dark:bg-white/5 border border-cyan-200 dark:border-white/10 text-[11px] font-mono text-cyan-800 dark:text-cyan-300 font-semibold">
                     {p.highlight}
                   </span>
-                  <span className="text-[11px] font-mono text-slate-500 uppercase">
+                  <span className="text-[11px] font-mono text-slate-400 dark:text-slate-500 uppercase font-semibold">
                     SYS-{idx + 1 < 10 ? `0${idx + 1}` : idx + 1}
                   </span>
                 </div>
 
                 {/* Title */}
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-300 transition-colors">
                     {p.title}
                   </h3>
-                  <p className="text-xs font-mono text-slate-400 mt-1">
+                  <p className="text-xs font-mono text-slate-500 dark:text-slate-400 mt-1">
                     {p.subtitle}
                   </p>
                 </div>
 
                 {/* Description */}
-                <p className="text-sm text-slate-300 leading-relaxed">
+                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   {p.description}
                 </p>
 
                 {/* Key Bullet Points */}
-                <div className="space-y-1.5 pt-2 border-t border-white/5">
+                <div className="space-y-1.5 pt-2 border-t border-slate-100 dark:border-white/5">
                   {p.details.map((detail, dIdx) => (
-                    <div key={dIdx} className="flex items-start gap-2 text-xs text-slate-400">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5" />
+                    <div key={dIdx} className="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-400">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-cyan-600 dark:text-cyan-400 shrink-0 mt-0.5" />
                       <span>{detail}</span>
                     </div>
                   ))}
@@ -214,20 +233,20 @@ export default function Projects() {
                 {/* Metrics / Fact Strip */}
                 <div className="grid grid-cols-3 gap-2 pt-3">
                   {p.metrics.map((m, mIdx) => (
-                    <div key={mIdx} className="p-2.5 rounded-xl bg-black/40 border border-white/5 text-center">
+                    <div key={mIdx} className="p-2.5 rounded-xl bg-slate-50 dark:bg-black/40 border border-slate-200/80 dark:border-white/5 text-center">
                       <div className="text-[10px] font-mono text-slate-500 uppercase">{m.label}</div>
-                      <div className="text-xs font-semibold text-slate-200 mt-0.5">{m.value}</div>
+                      <div className="text-xs font-semibold text-slate-800 dark:text-slate-200 mt-0.5">{m.value}</div>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-1.5 pt-5 mt-4 border-t border-white/10">
+              <div className="flex flex-wrap gap-1.5 pt-5 mt-4 border-t border-slate-100 dark:border-white/10">
                 {p.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/[0.06] text-[11px] font-mono text-slate-400"
+                    className="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-white/[0.04] border border-slate-200 dark:border-white/[0.06] text-[11px] font-mono text-slate-600 dark:text-slate-400"
                   >
                     {tag}
                   </span>

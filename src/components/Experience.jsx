@@ -60,35 +60,35 @@ export default function Experience() {
   return (
     <section id="experience" className="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto scroll-mt-16">
       {/* Section Header */}
-      <div className="border-b border-white/10 pb-6 mb-12">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-xs font-mono text-indigo-300 mb-2">
+      <div className="border-b border-slate-200 dark:border-white/10 pb-6 mb-12">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-xs font-mono text-indigo-700 dark:text-indigo-300 font-semibold mb-2">
           <Briefcase className="w-3.5 h-3.5" />
           <span>Professional Background</span>
         </div>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
           Field Operations &amp; <span className="gradient-accent">Career Journey</span>
         </h2>
-        <p className="text-slate-400 text-base max-w-2xl mt-1">
+        <p className="text-slate-600 dark:text-slate-400 text-base max-w-2xl mt-1">
           Two years on the ground deploying, tuning, and untangling complex industrial platforms where reliability is non-negotiable.
         </p>
       </div>
 
       {/* Enterprise Deployment Client Badges */}
-      <div className="mb-14 p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] backdrop-blur-md">
-        <div className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-4 flex items-center gap-2">
-          <Award className="w-4 h-4 text-cyan-400" />
+      <div className="mb-14 p-6 rounded-2xl bg-white/80 dark:bg-white/[0.02] border border-slate-200 dark:border-white/[0.06] backdrop-blur-md shadow-xs">
+        <div className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-4 flex items-center gap-2 font-semibold">
+          <Award className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
           <span>Major Enterprise Deployment Sites Served</span>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {enterpriseClients.map((client) => (
             <div
               key={client.name}
-              className="p-3.5 rounded-xl bg-black/40 border border-white/5 hover:border-cyan-500/30 transition-colors"
+              className="p-3.5 rounded-xl bg-slate-50 dark:bg-black/40 border border-slate-200/80 dark:border-white/5 hover:border-cyan-500/40 transition-colors"
             >
-              <div className="font-bold text-white text-base tracking-wide font-mono">
+              <div className="font-bold text-slate-900 dark:text-white text-base tracking-wide font-mono">
                 {client.name}
               </div>
-              <div className="text-[11px] text-slate-400 mt-0.5">
+              <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">
                 {client.label}
               </div>
             </div>
@@ -108,66 +108,66 @@ export default function Experience() {
             className="relative pl-10 sm:pl-14"
           >
             {/* Timeline Dot */}
-            <div className="absolute left-2.5 sm:left-4.5 -translate-x-1/2 top-1.5 w-4 h-4 rounded-full bg-[#0b0f17] border-2 border-cyan-400 shadow-md shadow-cyan-500/50 flex items-center justify-center">
-              <div className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+            <div className="absolute left-2.5 sm:left-4.5 -translate-x-1/2 top-1.5 w-4 h-4 rounded-full bg-white dark:bg-[#0b0f17] border-2 border-cyan-500 shadow-md shadow-cyan-500/30 flex items-center justify-center">
+              <div className="w-1.5 h-1.5 rounded-full bg-cyan-500" />
             </div>
 
             {/* Content Card */}
-            <div className="p-6 sm:p-7 rounded-3xl bg-[#0e1422]/90 border border-white/10 hover:border-white/20 backdrop-blur-xl shadow-xl space-y-4 transition-all">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-4">
+            <div className="p-6 sm:p-7 rounded-3xl bg-white/95 dark:bg-[#0e1422]/90 border border-slate-200 dark:border-white/10 hover:border-cyan-500/40 shadow-xs hover:shadow-lg dark:shadow-xl backdrop-blur-xl space-y-4 transition-all">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 dark:border-white/10 pb-4">
                 <div>
                   <div className="flex flex-wrap items-center gap-2">
-                    <h3 className="text-xl sm:text-2xl font-bold text-white">
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
                       {exp.role}
                     </h3>
-                    <span className="px-2.5 py-0.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs font-mono text-cyan-300">
+                    <span className="px-2.5 py-0.5 rounded-full bg-cyan-50 dark:bg-cyan-500/10 border border-cyan-200 dark:border-cyan-500/20 text-xs font-mono text-cyan-800 dark:text-cyan-300 font-semibold">
                       {exp.type}
                     </span>
                   </div>
-                  <div className="flex flex-wrap items-center gap-3 text-sm text-slate-400 mt-1">
-                    <span className="text-slate-200 font-medium flex items-center gap-1.5">
-                      <Building2 className="w-4 h-4 text-cyan-400" />
+                  <div className="flex flex-wrap items-center gap-3 text-sm text-slate-500 dark:text-slate-400 mt-1">
+                    <span className="text-slate-800 dark:text-slate-200 font-medium flex items-center gap-1.5">
+                      <Building2 className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
                       {exp.company}
                     </span>
                     <span>•</span>
                     <span className="flex items-center gap-1">
-                      <MapPin className="w-3.5 h-3.5 text-slate-500" />
+                      <MapPin className="w-3.5 h-3.5 text-slate-400" />
                       {exp.location}
                     </span>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2 text-xs font-mono text-slate-400 sm:text-right">
-                  <Calendar className="w-3.5 h-3.5 text-indigo-400" />
+                <div className="flex items-center gap-2 text-xs font-mono text-slate-500 dark:text-slate-400 sm:text-right font-medium">
+                  <Calendar className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
                   <span>{exp.period}</span>
                 </div>
               </div>
 
               {/* Highlight Banner */}
-              <div className="px-3.5 py-2 rounded-xl bg-gradient-to-r from-cyan-950/40 to-indigo-950/40 border border-cyan-800/30 text-xs font-mono text-cyan-300">
+              <div className="px-3.5 py-2 rounded-xl bg-cyan-50/80 dark:bg-gradient-to-r dark:from-cyan-950/40 dark:to-indigo-950/40 border border-cyan-200 dark:border-cyan-800/30 text-xs font-mono text-cyan-800 dark:text-cyan-300 font-semibold">
                 ★ {exp.highlight}
               </div>
 
-              <p className="text-sm text-slate-300 leading-relaxed">
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 {exp.description}
               </p>
 
               {/* Achievements */}
               <div className="space-y-2 pt-1">
                 {exp.achievements.map((item, i) => (
-                  <div key={i} className="flex items-start gap-2.5 text-xs text-slate-300">
-                    <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                  <div key={i} className="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300">
+                    <CheckCircle2 className="w-4 h-4 text-cyan-600 dark:text-cyan-400 shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </div>
                 ))}
               </div>
 
               {/* Tech Badges */}
-              <div className="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+              <div className="flex flex-wrap gap-1.5 pt-4 border-t border-slate-100 dark:border-white/5">
                 {exp.tech.map((t) => (
                   <span
                     key={t}
-                    className="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/[0.06] text-[11px] font-mono text-slate-400"
+                    className="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-white/[0.04] border border-slate-200 dark:border-white/[0.06] text-[11px] font-mono text-slate-600 dark:text-slate-400"
                   >
                     {t}
                   </span>

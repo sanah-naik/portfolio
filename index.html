@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en" class="light scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sanah Naik — Platform Engineer &amp; Technical Consultant</title>
   <meta name="description"
     content="Sanah Naik — Technical Consultant at Dassault Systèmes India. Enterprise 3DEXPERIENCE platform infrastructure, internal tooling, agentic automation, and creator of Fluent Notes." />
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('portfolio-theme');
+        if (saved === 'dark') {
+          document.documentElement.classList.add('dark');
+          document.documentElement.classList.remove('light');
+        } else {
+          document.documentElement.classList.add('light');
+          document.documentElement.classList.remove('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -13,7 +27,7 @@
     rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
 </head>
-<body class="bg-[#0b0f17] text-slate-100 antialiased selection:bg-cyan-500 selection:text-black min-h-screen">
+<body class="bg-[#f8fafc] text-slate-900 dark:bg-[#07090e] dark:text-slate-100 antialiased selection:bg-cyan-500 selection:text-white dark:selection:text-black min-h-screen transition-colors duration-300">
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>

@@ -43,15 +43,15 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-xs font-mono text-slate-300 backdrop-blur-md"
+            className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 text-xs font-mono text-slate-700 dark:text-slate-300 shadow-xs backdrop-blur-md"
           >
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
             <span>Technical Consultant @ Dassault Systèmes India</span>
-            <span className="text-slate-500">·</span>
-            <span className="text-cyan-400 flex items-center gap-1">
+            <span className="text-slate-400 dark:text-slate-500">·</span>
+            <span className="text-cyan-700 dark:text-cyan-400 flex items-center gap-1 font-semibold">
               <Globe2 className="w-3 h-3" /> Pune
             </span>
           </motion.div>
@@ -63,7 +63,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="space-y-2"
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.1]">
               Architecting <span className="gradient-accent">Enterprise Platforms</span>.
               <br />
               Engineering Modern Tools.
@@ -75,9 +75,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-base sm:text-lg text-slate-300/90 leading-relaxed max-w-xl font-normal"
+            className="text-base sm:text-lg text-slate-600 dark:text-slate-300/90 leading-relaxed max-w-xl font-normal"
           >
-            Hi, I’m <span className="text-white font-semibold">Sanah Naik</span>. I specialize in deploying, scaling, and automating mission-critical <strong className="text-cyan-300 font-medium">3DEXPERIENCE</strong> environments, ENOVIA customizations (JPO, TCL, REST), and creating modern developer utilities like <a href="#fluent-notes" className="text-white underline decoration-cyan-400 hover:text-cyan-300 font-medium">Fluent Notes</a>.
+            Hi, I’m <span className="text-slate-900 dark:text-white font-semibold">Sanah Naik</span>. I specialize in deploying, scaling, and automating mission-critical <strong className="text-cyan-700 dark:text-cyan-300 font-semibold">3DEXPERIENCE</strong> environments, ENOVIA customizations (JPO, TCL, REST), and creating modern developer utilities like <a href="#fluent-notes" className="text-slate-900 dark:text-white underline decoration-cyan-500 hover:text-cyan-600 dark:hover:text-cyan-300 font-semibold">Fluent Notes</a>.
           </motion.p>
 
           {/* Action CTAs */}
@@ -89,27 +89,27 @@ export default function Hero() {
           >
             <a
               href="#fluent-notes"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-cyan-500 via-sky-500 to-indigo-600 text-white font-semibold text-sm shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-cyan-600 via-sky-600 to-indigo-600 dark:from-cyan-500 dark:via-sky-500 dark:to-indigo-600 text-white font-semibold text-sm shadow-lg shadow-cyan-600/25 dark:shadow-cyan-500/25 hover:shadow-cyan-600/40 hover:scale-[1.02] active:scale-[0.98] transition-all"
             >
-              <Sparkles className="w-4 h-4 text-cyan-200" />
+              <Sparkles className="w-4 h-4 text-cyan-100 dark:text-cyan-200" />
               <span>Explore Fluent Notes</span>
               <ArrowRight className="w-4 h-4" />
             </a>
 
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/[0.05] hover:bg-white/[0.1] text-white border border-white/10 text-sm font-medium transition-all"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white dark:bg-white/[0.05] hover:bg-slate-100 dark:hover:bg-white/[0.1] text-slate-800 dark:text-white border border-slate-200 dark:border-white/10 shadow-xs text-sm font-medium transition-all"
             >
-              <Layers className="w-4 h-4 text-slate-400" />
+              <Layers className="w-4 h-4 text-slate-500 dark:text-slate-400" />
               <span>Enterprise Systems</span>
             </a>
 
             <button
               onClick={copyEmail}
-              className="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-slate-700/60 text-xs font-mono transition-all"
+              className="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-white dark:bg-slate-900/80 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60 shadow-xs text-xs font-mono transition-all"
               title="Click to copy email address"
             >
-              {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-slate-400" />}
+              {copied ? <Check className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-slate-400" />}
               <span>{copied ? 'Copied sanahnaik5@gmail.com' : 'sanahnaik5@gmail.com'}</span>
             </button>
           </motion.div>
@@ -125,26 +125,26 @@ export default function Hero() {
           {/* Glowing background ring */}
           <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-cyan-500/30 to-purple-600/30 blur-xl opacity-50 group-hover:opacity-100 transition duration-1000 -z-10" />
 
-          <div className="rounded-2xl bg-[#0e1422]/90 border border-white/10 p-6 backdrop-blur-xl shadow-2xl space-y-5">
+          <div className="rounded-2xl bg-white/95 dark:bg-[#0e1422]/90 border border-slate-200 dark:border-white/10 p-6 backdrop-blur-xl shadow-xl shadow-slate-200/50 dark:shadow-2xl space-y-5">
             {/* Terminal Topbar */}
-            <div className="flex items-center justify-between border-b border-white/10 pb-3">
+            <div className="flex items-center justify-between border-b border-slate-100 dark:border-white/10 pb-3">
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-rose-500/80" />
                 <div className="w-3 h-3 rounded-full bg-amber-500/80" />
                 <div className="w-3 h-3 rounded-full bg-emerald-500/80" />
-                <span className="ml-2 font-mono text-xs text-slate-400">sanah@3dx-control-plane: ~</span>
+                <span className="ml-2 font-mono text-xs text-slate-500 dark:text-slate-400">sanah@3dx-control-plane: ~</span>
               </div>
-              <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-cyan-950/80 text-cyan-400 border border-cyan-800/60">
+              <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-cyan-50 dark:bg-cyan-950/80 text-cyan-700 dark:text-cyan-400 border border-cyan-200 dark:border-cyan-800/60 font-semibold">
                 ACTIVE
               </span>
             </div>
 
             {/* Simulated Live Console Log */}
-            <div className="font-mono text-xs space-y-2.5 bg-black/40 p-4 rounded-xl border border-white/5">
+            <div className="font-mono text-xs space-y-2.5 bg-[#0a0f1d] text-slate-100 p-4 rounded-xl border border-slate-800/80 dark:border-white/5 shadow-inner">
               <div className="flex items-center gap-2 text-slate-400">
-                <span className="text-cyan-400">❯</span>
+                <span className="text-cyan-400 font-bold">❯</span>
                 <span className="text-purple-300">platform.deploy</span>
-                <span className="text-slate-500">--env=PRODUCTION --tier=ENOVIA</span>
+                <span className="text-slate-400">--env=PRODUCTION --tier=ENOVIA</span>
               </div>
               <div className="text-emerald-400 pl-4 flex items-center gap-2">
                 <Check className="w-3.5 h-3.5" />
@@ -158,23 +158,23 @@ export default function Hero() {
                 <Cpu className="w-3.5 h-3.5 text-cyan-400" />
                 <span>Active tenants: IRS · MSIL · L&amp;T Vizag</span>
               </div>
-              <div className="text-slate-400 pl-4 pt-1 border-t border-white/5 flex items-center justify-between text-[11px]">
-                <span className="text-slate-500">Latest build:</span>
-                <span className="text-indigo-300">Fluent Notes v1.0.0 (Electron/Windows 11)</span>
+              <div className="text-slate-400 pl-4 pt-1 border-t border-slate-800 flex items-center justify-between text-[11px]">
+                <span className="text-slate-400">Latest build:</span>
+                <span className="text-indigo-300">Fluent Notes v1.0.0 (Windows 11)</span>
               </div>
             </div>
 
             {/* Quick System Highlights */}
             <div className="grid grid-cols-2 gap-3 pt-1">
-              <div className="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06]">
-                <div className="text-[11px] font-mono text-slate-400">Core Expertise</div>
-                <div className="text-sm font-semibold text-slate-200 mt-0.5">3DEXPERIENCE &amp; ENOVIA</div>
-                <div className="text-[10px] text-cyan-400/90 font-mono mt-1">JPO · TCL · REST · HAProxy</div>
+              <div className="p-3 rounded-xl bg-slate-50 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.06]">
+                <div className="text-[11px] font-mono text-slate-500 dark:text-slate-400">Core Expertise</div>
+                <div className="text-sm font-semibold text-slate-800 dark:text-slate-200 mt-0.5">3DEXPERIENCE &amp; ENOVIA</div>
+                <div className="text-[10px] text-cyan-700 dark:text-cyan-400/90 font-mono mt-1 font-medium">JPO · TCL · REST · HAProxy</div>
               </div>
-              <div className="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06]">
-                <div className="text-[11px] font-mono text-slate-400">Tooling &amp; AI</div>
-                <div className="text-sm font-semibold text-slate-200 mt-0.5">Agentic Automation</div>
-                <div className="text-[10px] text-purple-400/90 font-mono mt-1">Antigravity · React · Python</div>
+              <div className="p-3 rounded-xl bg-slate-50 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.06]">
+                <div className="text-[11px] font-mono text-slate-500 dark:text-slate-400">Tooling &amp; AI</div>
+                <div className="text-sm font-semibold text-slate-800 dark:text-slate-200 mt-0.5">Agentic Automation</div>
+                <div className="text-[10px] text-purple-700 dark:text-purple-400/90 font-mono mt-1 font-medium">Antigravity · React · Python</div>
               </div>
             </div>
           </div>
@@ -191,15 +191,15 @@ export default function Hero() {
         {metrics.map((m) => (
           <div
             key={m.label}
-            className="p-4 sm:p-5 rounded-2xl bg-white/[0.03] border border-white/[0.07] backdrop-blur-md hover:border-cyan-500/30 transition-colors"
+            className="p-4 sm:p-5 rounded-2xl bg-white/85 dark:bg-white/[0.03] border border-slate-200 dark:border-white/[0.07] shadow-xs dark:shadow-none backdrop-blur-md hover:border-cyan-500/40 dark:hover:border-cyan-500/30 transition-all"
           >
-            <div className="text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-cyan-300 font-mono">
+            <div className="text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-slate-800 to-cyan-600 dark:from-white dark:via-slate-100 dark:to-cyan-300 font-mono">
               {m.value}
             </div>
-            <div className="text-xs font-semibold text-slate-200 mt-1">
+            <div className="text-xs font-semibold text-slate-800 dark:text-slate-200 mt-1">
               {m.label}
             </div>
-            <div className="text-[11px] font-mono text-slate-400 mt-0.5">
+            <div className="text-[11px] font-mono text-slate-500 dark:text-slate-400 mt-0.5">
               {m.detail}
             </div>
           </div>
