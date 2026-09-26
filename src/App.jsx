@@ -1,25 +1,27 @@
-import ProgressRule from './components/ProgressRule'
-import Cover from './components/Cover'
-import Contents from './components/Contents'
-import Byline from './components/Byline'
-import Features from './components/Features'
-import Dispatches from './components/Dispatches'
-import FieldNotes from './components/FieldNotes'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import FluentNotesShowcase from './components/FluentNotesShowcase'
+import Projects from './components/Projects'
+import Experience from './components/Experience'
+import Skills from './components/Skills'
 import Credentials from './components/Credentials'
-import BackCover from './components/BackCover'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
-    <>
-      <ProgressRule />
-      <Cover />
-      <Contents />
-      <Byline />
-      <Features />
-      <Dispatches />
-      <FieldNotes />
-      <Credentials />
-      <BackCover />
-    </>
+    <div className="min-h-screen bg-[#07090e] text-slate-100 flex flex-col selection:bg-cyan-500 selection:text-black">
+      <Navbar />
+      <main className="flex-1">
+        <Hero />
+        <FluentNotesShowcase />
+        <Projects />
+        <Experience />
+        <Skills />
+        <Credentials />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
   )
 }

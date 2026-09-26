@@ -1,103 +1,70 @@
-# Sanah Naik — Portfolio
+# Sanah Naik — Portfolio & Platform Engineering Showcase
 
-A static, single-page portfolio. Plain **HTML / CSS / JS** — no framework, no
-build step. Open `index.html` and it runs.
+An ultra-modern, high-performance portfolio engineered with **React 18**, **Tailwind CSS v4**, **Framer Motion**, and **Vite**.
 
-```
-portfolio/
-├── index.html   # all content lives here (edit text/links directly)
-├── styles.css   # design tokens + layout + animations
-├── script.js    # scroll reveals, gliding nav indicator, hero load-in
-└── README.md
-```
+Designed with deep obsidian glassmorphism, glowing telemetry, and an interactive simulation of **[Fluent Notes](https://github.com/sanah-naik/Fluent-Notes)**.
 
-## Preview locally
+---
 
-Just open `index.html` in a browser. Or run a tiny local server (nicer for
-smooth scrolling / fonts):
+## ⚡ Tech Stack
+
+- **Framework**: [React 18](https://react.dev/) + [Vite 6](https://vite.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) with native `@theme` tokens & glassmorphism
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Typography**: [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) & [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono)
+- **Icons**: [Lucide React](https://lucide.dev/) + Custom SVG Brand Icons
+
+---
+
+## 🌟 Key Highlights & Sections
+
+1. **Floating Frosted Glass Navbar**: Smooth scrolling, responsive mobile menu, active status indicator.
+2. **Hero Telemetry & Console**: Real-time stats (2+ Years Field Ops, 3 Major Enterprise Deployments: IRS, MSIL, L&T Vizag, 6 Production Tools, 4 Certifications) and live platform terminal.
+3. **Featured Showcase: [Fluent Notes](https://github.com/sanah-naik/Fluent-Notes)**:
+   - Interactive Windows 11 Desktop simulation widget.
+   - Test 1-click collapse/expand (`Ctrl + Alt + H`), right/left edge docking, hover peek previews, and pastel theme palette switcher.
+   - Direct clone snippet and GitHub repository links.
+4. **Systems & Enterprise Projects**:
+   - Dynamic category filter (`All`, `Enterprise & 3DX`, `Agentic AI`, `Developer Tools`).
+   - Detailed specifications of **AccessPortal v4.0**, **AI Refresh Automation Engine**, **3DX Role Navigator**, **Enterprise Production Dispatches**, and **Warehouse Automation**.
+5. **Field Operations & Experience**:
+   - Chronological career timeline at **Dassault Systèmes India (Pune)** and **Garg Group**.
+   - Deployment badges for **IRS**, **MSIL (Maruti Suzuki)**, **L&T Vizag**.
+6. **Technical Capabilities Matrix**:
+   - Grouped into Platform & Enterprise, Languages, Modern Frameworks, Infrastructure & Cloud, Agentic AI, and Databases.
+7. **Official Credentials & Education**:
+   - Dassault Systèmes Infrastructure Consultant, Architecture Level 1, Installation Essentials, and AWS Cloud Practitioner.
+   - Bachelor of Engineering in Computer Engineering (Bharati Vidyapeeth).
+8. **Direct Contact & Dispatch**:
+   - One-click copy email (`sanahnaik5@gmail.com`) and phone (`+91 90964 84786`).
+   - Direct links to LinkedIn (`linkedin.com/in/sanah-naik-`) and GitHub (`github.com/sanah-naik`).
+   - Interactive contact message form.
+
+---
+
+## 🚀 Local Development
 
 ```bash
-# Python 3
-python -m http.server 8000
-# then visit http://localhost:8000
+# 1. Install dependencies
+npm install
+
+# 2. Start local development server
+npm run dev
+
+# 3. Build for production
+npm run build
+
+# 4. Preview production build locally
+npm run preview
 ```
 
-## Deploy
+---
+
+## 📦 Deployment
 
 ### GitHub Pages
-1. Push these files to a repo (e.g. `sanah/portfolio`).
-2. Repo **Settings → Pages → Build and deployment**.
-3. Source: **Deploy from a branch**, Branch: `main` / `/root`. Save.
-4. Live at `https://<username>.github.io/<repo>/` within a minute or two.
-
-### Netlify
-- Drag the `portfolio` folder onto <https://app.netlify.com/drop>, **or**
-- Connect the repo. Build command: *none*. Publish directory: `.` (root).
-
-Both work because there's nothing to compile — the folder *is* the site.
-
-## Editing content
-
-Everything you'll want to change is in **`index.html`**, and each section is
-labelled with a comment (`1. HERO`, `2. ABOUT`, …).
-
-Common edits:
-
-| Want to change…            | Where                                                          |
-| -------------------------- | -------------------------------------------------------------- |
-| Name / title / tagline     | `1. HERO` section                                              |
-| Bio text                   | `2. ABOUT` section                                             |
-| Stat grid quick facts      | `2. ABOUT` — each `<div class="stat">` (label + value)         |
-| Role bullets / period      | `3. EXPERIENCE` — `.timeline__points`, `.timeline__period`     |
-| Skills                     | `4. SKILLS` — add/remove `<li class="chip">…</li>` in a row     |
-| Projects                   | `5. PROJECTS` — each `<article class="card card--project">`    |
-| Certifications             | `6. CERTIFICATIONS` — each `<article class="cert">`            |
-| Education                  | `7. EDUCATION` — `.edu__degree`, `.edu__school`, `.edu__period` |
-| **Contact links**          | `8. CONTACT` — replace the placeholder `href`s                 |
-
-> **Contact links are placeholders.** Search `index.html` for
-> `your-email@example.com` and swap in your real email. The LinkedIn URL is
-> pre-filled as `linkedin.com/in/sanah-naik-` — double-check it points where
-> you want. Add a GitHub link by copying one of the `<a class="contact__link">`
-> blocks if you'd like one.
-
-## Theming
-
-Open **`styles.css`** and edit the tokens at the top (`:root`):
-
-- `--accent` — the one highlight color. Change this one line to reskin the site.
-- `--bg`, `--bg-alt`, `--surface`, `--ink*` — background/text palette.
-- `--ease`, `--dur` — animation curve + speed (kept consistent site-wide).
-
-### Want a dark theme?
-The palette is fully token-driven, so a dark mode is just a second set of
-values. Drop this after `:root` in `styles.css` to follow the OS setting:
-
-```css
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg:        #0f0d0c;
-    --bg-alt:    #171412;
-    --surface:   #1c1917;
-    --ink:       #f5f2ee;
-    --ink-soft:  #b8b1a9;
-    --ink-faint: #7d766e;
-    --line:      #2a2521;
-    /* --accent can stay the same */
-  }
-  .nav.is-scrolled { background: rgba(15, 13, 12, 0.72); }
-}
+The project is preconfigured with `base: '/portfolio/'` in `vite.config.js`:
+```bash
+npm run build
 ```
-
-## Animation notes
-
-- **Scroll reveals** use `IntersectionObserver`; each element animates **once**.
-- **Cascading grids** (`data-stagger`) delay each child by ~90ms in `script.js`
-  (change `STAGGER_MS`).
-- **Nav indicator** slides with `transform` only (GPU-friendly), tracking the
-  active section by scroll position.
-- **`prefers-reduced-motion`** is respected — animations are disabled/instant
-  for users who ask for that.
-
-Everything animates with `transform`/`opacity` only, on a single easing curve
-(`cubic-bezier(0.16, 1, 0.3, 1)`).
+Push the repository to GitHub and enable GitHub Pages under **Settings → Pages** (Source: GitHub Actions or deploy `dist`).
